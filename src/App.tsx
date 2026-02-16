@@ -1,22 +1,17 @@
-import { useRef } from "react";
-import Button from "./components/Button";
-import Input from "./components/Input";
+import AddTimer from "./components/AddTimer";
+import Header from "./components/Header";
+import Timers from "./components/Timers";
+import TimersContextProvider from "./store/TimersContextProvider";
 
 function App() {
-  const inputRef = useRef<HTMLInputElement>(null);
-
   return (
-    <main>
-      <Input label="Name" id="name" type="text" ref={inputRef} />
-      <Input label="Age" id="age" type="number" />
-
-      <Button disabled el="button">
-        Button
-      </Button>
-      <Button el="anchor" href="www.google.com">
-        Link
-      </Button>
-    </main>
+    <TimersContextProvider>
+      <main>
+        <Header></Header>
+        <AddTimer></AddTimer>
+        <Timers></Timers>
+      </main>
+    </TimersContextProvider>
   );
 }
 
