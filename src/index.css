@@ -1,8 +1,7 @@
 
 :root {
-  --bg1: #f0f6f8;
-  --bg2: #e0e1e7;
-  --bg-main: #3a4346;
+  --bg1: #202020;
+  --bg-main: #4d4d4d;
 }
 
 * {
@@ -17,90 +16,69 @@ html {
 
 body {
   min-height: 100vh;
-  background: linear-gradient(var(--bg1), var(--bg2));
+  background: var(--bg1);
+  color: #ffffff;
 }
 
 main {
   width: 90%;
-  max-width: 40rem;
+  max-width: 50rem;
   margin: 3rem auto;
-  padding: 2rem;
-  background-color: var(--bg-main);
-  color: #f0f6f8;
-  border-radius: 6px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 3rem;
-  align-items: center;
-}
-
-.header h1 {
-  font-size: x-large;
-}
-
-.form {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.btn {
-  background-color: #556779;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: #7d8893;
-}
-
-.input-element {
-  margin-bottom: 1rem;
-}
-
-.input-element label {
+main img {
   display: block;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: white;
-  font-size: 0.8rem;
-  margin-bottom: 5px;
+  margin: 2rem auto;
+  height: 8rem;
+  width: 8rem;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0px 0px 8px #a1ecfb;
 }
 
-.input-element input {
-  width: 50%;
-  padding: 7px 10px;
-  background-color: #d5d5db;
-  border: none;
-  border-radius: 6px;
+#blog-posts h1 {
+  text-align: center;
 }
 
-.timers-list {
+.blog-posts-list {
   list-style-type: none;
   display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
   grid-template-columns: repeat(2, 1fr);
-  gap: 5px;
 }
 
-article {
-  background-color: #525c64;
-  padding: 0.5rem 1rem;
+.blog-posts-list li {
+  background: var(--bg-main);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.blog-posts-list li h2 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.blog-posts-list li p {
+  font-size: 0.875rem;
+  color: #cccccc;
+}
+
+.loader {
+  display: block;
+  margin: 2rem auto;
+  width: 3rem;
+  height: 3rem;
+  border: 4px solid #ffffff;
+  border-top: 4px solid transparent;
+  border-radius: 50%;
+  animation: 3s infinite alternate slide-in;
+}
+
+.error {
+  border: 2px solid red;
+  padding: 1rem;
   text-align: center;
-  box-shadow: 0px 5px 10px rgba(0,0,0,0.25);
-}
-
-article h2 {
-  font-size: medium;
-}
-
-article p {
-  font-size: small;
-  color: #d5d5db;
 }
